@@ -1,7 +1,7 @@
-module "provider" {
-  source = "./modules/provider"
-  region_name = var.region_name
+provider "aws" {
+  region = var.region_name
 }
+
 module "vpc" {
   source = "./modules/vpc"
   vpc_cidr = var.vpc_cidr
